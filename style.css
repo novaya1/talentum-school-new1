@@ -76,38 +76,50 @@ body{font-size:16px}h1,h2,h3{letter-spacing:-.035em}h1{font-weight:750}.hero h1{
 @media(max-width:900px){.hero-visual{transform:none}}
 @media(max-width:550px){.feature .ico,.feature[data-accent='1'] .ico,.feature[data-accent='2'] .ico,.feature[data-accent='3'] .ico{width:56px;height:56px}.about img{height:260px}}
 
-/* Brand palette: cream, plum, lavender, turquoise and a small yellow accent. */
-:root{--ink:#2A1C38;--muted:#2A1C38B8;--purple:#7657EE;--purple-dark:#2A1C38;--teal:#01CDCA;--line:#2A1C3824;--paper:#FCF8EF;--soft:#7657EE14;--yellow:#FDBE39}
-.header,.footer,.nav{background:var(--paper)}
+/* Soft brand palette inspired by the school's educational materials. */
+:root{--ink:#2A1C38;--muted:#655D6D;--purple:#7657EE;--purple-dark:#2A1C38;--teal:#01CDCA;--line:#E9E4DC;--paper:#FCF8EF;--soft:#F0E8FA;--mint:#E3F5EF;--rose:#FCEAF0;--butter:#FFF4D3;--surface:#FFFFFF;--yellow:#FDBE39}
+body,.header,.footer,.nav{background:var(--paper)}
+.header{border-bottom:1px solid var(--line);box-shadow:none}
 .nav a,.hero .school-kind,.hero p,.hero-meta,.footer p,.grade-head span,.subject-table th{color:var(--muted)}
-.nav a.active,.nav a:hover,.hero h1 span,.channel-link{color:var(--purple)}
-.nav a.active:after,.hero h1 span:after{background:var(--yellow)}
-.btn,.cta,.about .btn{background:var(--purple);color:var(--paper);box-shadow:0 4px 0 var(--ink),0 8px 18px #7657EE24}
-.btn:hover,.cta:hover,.about .btn:hover{background:var(--ink);color:var(--paper);box-shadow:0 2px 0 var(--purple)}
-.hero{background:radial-gradient(ellipse at 86% 55%,#01CDCA20,transparent 55%),linear-gradient(135deg,var(--paper),#7657EE0D)}
-.hero-tag{color:var(--ink);background:var(--paper);border-color:var(--line)}
+h1,h2,h3,.hero h1,.pagehero h1,.grade-head h3,.grade-card:nth-child(even) h3,.grade-price strong,.grade-card:nth-child(even) .grade-price strong,.course-price{color:var(--ink)}
+.hero h1 span{color:var(--ink)}
+.hero h1 span:after{background:var(--teal);height:4px;width:64px}
+.btn,.cta,.about .btn,.hero-actions .lesson-cta{background:var(--purple);color:var(--surface);box-shadow:none;border-radius:14px}
+.btn:hover,.cta:hover,.about .btn:hover{background:var(--ink);color:var(--surface);box-shadow:none}
+.hero,.pagehero{background:var(--paper)}
+.hero-tag{color:var(--ink);background:var(--soft);border:1px solid transparent}
 .hero-tag>span{background:var(--teal)}
 .eyebrow,.card-category,.school-details>.wrap>.eyebrow,.pagehero .term{color:var(--ink)}
-.hero h1,.pagehero h1,.grade-head h3,.grade-card:nth-child(even) h3,.grade-price strong,.grade-card:nth-child(even) .grade-price strong,.course-price{color:var(--ink)}
-.feature{background:#7657EE14;box-shadow:0 5px 0 #7657EE30}
-.feature:nth-child(2),.feature:nth-child(4){background:#01CDCA18;box-shadow:0 5px 0 #01CDCA35}
-.feature:nth-child(3){background:#7657EE0D;box-shadow:0 5px 0 #7657EE24}
-.card,.info,.grade-card,.course-card,.faq details{background:var(--paper);box-shadow:0 5px 0 #2A1C3814;border-color:var(--line)}
-.card:nth-child(2){box-shadow:0 5px 0 #7657EE30}.card:nth-child(3){box-shadow:0 5px 0 #01CDCA35}
-.card .btn,.card:nth-child(2) .btn,.card:nth-child(3) .btn{background:#7657EE14;color:var(--ink);box-shadow:none}
-.card .btn:hover{background:var(--purple);color:var(--paper)}
-.school-details{background:#01CDCA14;border-color:var(--line)}
-.school-details .info:nth-child(2){background:#7657EE0D}
-.pagehero{background:radial-gradient(ellipse at 90% 80%,#01CDCA20,transparent 60%),var(--paper)}
-.grade-links a{background:#7657EE14;color:var(--ink);box-shadow:0 4px 0 #7657EE30}
-.grade-card,.course-card{border-top-color:var(--purple)}
+.feature,.feature:nth-child(2),.feature:nth-child(3),.feature:nth-child(4){box-shadow:none;border:1px solid var(--line)}
+.feature{background:var(--soft)}
+.feature:nth-child(2){background:var(--mint)}
+.feature:nth-child(3){background:var(--rose)}
+.feature:nth-child(4){background:var(--butter)}
+.card,.info,.grade-card,.course-card,.faq details{background:var(--surface);border:1px solid var(--line);box-shadow:none}
+.card:nth-child(2),.card:nth-child(3),.card:hover{box-shadow:none}
+.card:hover{border-color:#7657EE70}
+.card-media{background:var(--soft)}
+.card .btn,.card:nth-child(2) .btn,.card:nth-child(3) .btn{background:var(--soft);color:var(--ink);box-shadow:none}
+.card:nth-child(2) .btn{background:var(--rose)}
+.card:nth-child(3) .btn{background:var(--mint)}
+.card .btn:hover{background:var(--purple);color:var(--surface)}
+.school-details{background:var(--mint);border-color:var(--line)}
+.school-details .info:nth-child(2){background:var(--soft)}
+.grade-links a{background:var(--soft);color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.grade-links a:hover{background:var(--mint)}
+.grade-card,.course-card{border-top:4px solid var(--purple)}
 .grade-card:nth-child(even),.course-card:nth-child(2){border-top-color:var(--teal)}
-.course-card:nth-child(3){border-top-color:var(--purple)}
-.course-tag,.course-card:nth-child(2) .course-tag,.course-card:nth-child(3) .course-tag{background:#01CDCA20;color:var(--ink);box-shadow:0 4px 0 #01CDCA35}
+.course-card:nth-child(3){border-top-color:#E8A3BE}
+.course-tag,.course-card:nth-child(2) .course-tag,.course-card:nth-child(3) .course-tag{background:var(--soft);color:var(--ink);box-shadow:none}
+.course-card:nth-child(2) .course-tag{background:var(--mint)}
+.course-card:nth-child(3) .course-tag{background:var(--rose)}
+.subject-table td{border-color:var(--line)}
 .subject-table td:last-child{color:var(--ink)}
-.price-note{background:#FDBE3924;color:var(--ink)}
-.about img,.card-media img[src="icon-cap.png"]{background:#7657EE0D;box-shadow:none}
-.footer{border-top-color:var(--teal)}
+.price-note{background:var(--butter);color:var(--ink)}
+.about img,.card-media img[src="icon-cap.png"]{background:var(--soft);box-shadow:none}
+.footer{border-top:1px solid var(--line)}
+.channel-link{color:var(--purple)}
+.contactlinks a{background:var(--surface);border-color:var(--line)}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:var(--purple)}
 
 /* Preserve the supplied transparent logo and its original proportions. */
