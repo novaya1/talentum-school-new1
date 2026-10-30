@@ -131,3 +131,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:var(--p
 @media(max-width:1180px){.nav{gap:12px}.nav a{padding:12px 16px}}
 
 .nav a.active:hover,.nav a.active:focus-visible{border-color:#2A1C38}
+
+/* Primary lesson booking action on the home page. */
+.hero-actions .lesson-cta{background:#7657EE;color:#FCF8EF;max-width:100%;text-align:center}
+.hero-actions .lesson-cta:hover{background:#2A1C38}
