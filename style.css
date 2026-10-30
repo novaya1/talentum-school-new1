@@ -91,10 +91,10 @@ body,button{font-family:'Nunito',Arial,sans-serif}
 h1,h2,h3{font-family:'Nunito',Arial,sans-serif;letter-spacing:-.025em;font-weight:900}
 .header{background:var(--soft);border-bottom:0;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .header .logo{margin-right:32px}
-.nav a{border:1px solid transparent;border-radius:10px;padding:9px 5px;background:#7657EE;color:#FFFFFF;transition:border-color .2s,background-color .2s}
-.nav a.active{color:#FFFFFF;border-color:transparent;background:#7657EE}
+.nav a{border:1px solid transparent;border-radius:10px;padding:9px 5px;background:transparent;color:#2A1C38;transition:border-color .2s,background-color .2s}
+.nav a.active{color:#2A1C38;border-color:transparent;background:transparent}
 .nav a.active:after{display:none}
-.nav a:hover,.nav a:focus-visible{border-color:#2A1C38;color:#FFFFFF;background:#7657EE}
+.nav a:hover,.nav a:focus-visible{border-color:#2A1C38;color:#2A1C38;background:transparent}
 .header-booking{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;max-width:205px;padding:10px 16px;margin-left:32px;border:1px solid transparent;border-radius:14px;background:#7657EE;color:#FFFFFF;font-size:14px;font-weight:800;text-align:center;line-height:1.35;transition:border-color .2s,background-color .2s}
 .header-booking:hover,.header-booking:focus-visible{border-color:#2A1C38;background:#7657EE}
 @media(min-width:1181px){.header .wrap{max-width:1500px;gap:0;padding-left:24px;padding-right:24px}.header .logo img{width:170px}.nav{margin-left:0;flex:1;min-width:0;justify-content:space-between;gap:8px;background:transparent}.nav a{font-size:13px}}
