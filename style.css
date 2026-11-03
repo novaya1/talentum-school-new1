@@ -130,3 +130,7 @@ h1,h2,h3{font-family:'Nunito',Arial,sans-serif;letter-spacing:-.025em;font-weigh
 .hero p{font-size:18px;max-width:540px}
 @media(max-width:900px){.hero{padding-top:44px}.hero h1{font-size:48px}}
 @media(max-width:550px){.hero{padding-top:32px}.hero h1{font-size:36px}.hero p{font-size:17px}}
+
+/* Give the desktop menu breathing room after the logo. */
+@media(min-width:1181px){.header .logo{margin-right:64px}.header .nav{gap:20px;justify-content:space-between}.header .nav a{padding:10px 0}.header-booking{margin-left:36px}}
+@media(min-width:1440px){.header .logo{margin-right:80px}.header .nav{gap:28px}}
