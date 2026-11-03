@@ -146,3 +146,20 @@ h1,h2,h3{font-family:'Nunito',Arial,sans-serif;letter-spacing:-.025em;font-weigh
  .hero .hero-meta{margin-top:20px}
  .hero .school-kind{line-height:1.5}
 }
+
+/* Enrollment gift and expandable attestation information. */
+.school-bonus{padding:36px 0}
+.bonus-card{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:32px 36px;background:var(--butter);border:1px solid #EAD9A6;border-radius:24px}
+.bonus-card .eyebrow{color:#735425}
+.bonus-card h2{margin:10px 0 12px}
+.bonus-card p{margin:0;max-width:680px;color:var(--ink)}
+.bonus-card .btn{flex-shrink:0}
+.attestation-card{margin-top:24px;background:var(--soft);border:1px solid #D8C8EC;border-radius:20px;overflow:hidden}
+.attestation-card summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 32px;font-size:20px;font-weight:900;letter-spacing:.06em;cursor:pointer;list-style:none}
+.attestation-card summary::-webkit-details-marker{display:none}
+.attestation-card summary::after{content:'+';font-size:28px;line-height:1}
+.attestation-card[open] summary::after{content:'−'}
+.attestation-content{padding:0 32px 28px}
+.attestation-content p{margin:0;font-size:20px;font-weight:800;color:var(--ink)}
+.attestation-content img{width:100%;height:auto;margin-top:24px;border-radius:16px}
+@media(max-width:700px){.bonus-card{flex-direction:column;align-items:stretch;padding:26px 22px;gap:24px}.bonus-card h2{font-size:28px}.attestation-card summary{padding:22px;font-size:18px}.attestation-content{padding:0 22px 24px}.attestation-content p{font-size:18px}}
