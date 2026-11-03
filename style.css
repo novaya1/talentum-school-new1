@@ -112,3 +112,14 @@ h1,h2,h3{font-family:'Nunito',Arial,sans-serif;letter-spacing:-.025em;font-weigh
 .hero .hero-link:focus-visible{outline-color:#fff}
 @media(max-width:900px){.hero{padding:70px 0;min-height:580px}}
 @media(max-width:550px){.hero{padding:48px 0;min-height:560px}.hero::before{background:rgba(18,13,28,.55)}}
+
+/* Muted contact colors complement the school palette. */
+.contactlinks a{display:flex;align-items:center;justify-content:center;min-height:88px;text-align:center;font-weight:800;line-height:1.5;transition:background-color .2s,box-shadow .2s,transform .2s}
+.contactlinks .contact-telegram{background:#DCEEF8;border-color:#BDDCEB;color:#24546C}
+.contactlinks .contact-whatsapp{background:#DDF0E5;border-color:#BBDDC9;color:#285C43}
+.contactlinks .contact-phone{background:var(--soft);border-color:#D8C8EC;color:#573F85}
+.contactlinks .contact-telegram:hover{background:#CBE5F3}
+.contactlinks .contact-whatsapp:hover{background:#CAE7D7}
+.contactlinks .contact-phone:hover{background:#E4D7F3}
+.contactlinks a:hover{transform:translateY(-2px);box-shadow:0 5px 16px #2A1C3810}
+@media(prefers-reduced-motion:reduce){.contactlinks a{transition:none}.contactlinks a:hover{transform:none}}
