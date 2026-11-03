@@ -123,3 +123,10 @@ h1,h2,h3{font-family:'Nunito',Arial,sans-serif;letter-spacing:-.025em;font-weigh
 .contactlinks .contact-phone:hover{background:#E4D7F3}
 .contactlinks a:hover{transform:translateY(-2px);box-shadow:0 5px 16px #2A1C3810}
 @media(prefers-reduced-motion:reduce){.contactlinks a{transition:none}.contactlinks a:hover{transform:none}}
+
+/* Bring the hero copy upward and give the message a little more presence. */
+.hero{align-items:flex-start;padding-top:56px}
+.hero h1{font-size:clamp(42px,4.2vw,60px);max-width:760px}
+.hero p{font-size:18px;max-width:540px}
+@media(max-width:900px){.hero{padding-top:44px}.hero h1{font-size:48px}}
+@media(max-width:550px){.hero{padding-top:32px}.hero h1{font-size:36px}.hero p{font-size:17px}}
