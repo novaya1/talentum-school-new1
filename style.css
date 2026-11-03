@@ -134,3 +134,15 @@ h1,h2,h3{font-family:'Nunito',Arial,sans-serif;letter-spacing:-.025em;font-weigh
 /* Give the desktop menu breathing room after the logo. */
 @media(min-width:1181px){.header .logo{margin-right:64px}.header .nav{gap:20px;justify-content:space-between}.header .nav a{padding:10px 0}.header-booking{margin-left:36px}}
 @media(min-width:1440px){.header .logo{margin-right:80px}.header .nav{gap:28px}}
+
+/* Fit the full hero message into shorter desktop windows. */
+@media(min-width:901px){
+ .hero{min-height:calc(100svh - 96px);padding:36px 0 28px;align-items:center}
+}
+@media(min-width:901px) and (max-height:760px){
+ .hero{padding:24px 0}
+ .hero h1{font-size:clamp(42px,3.7vw,52px);line-height:1.12;margin:18px 0}
+ .hero p{font-size:17px;line-height:1.6;margin:18px 0}
+ .hero .hero-meta{margin-top:20px}
+ .hero .school-kind{line-height:1.5}
+}
