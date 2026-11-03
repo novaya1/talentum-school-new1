@@ -163,3 +163,6 @@ h1,h2,h3{font-family:'Nunito',Arial,sans-serif;letter-spacing:-.025em;font-weigh
 .attestation-content p{margin:0;font-size:20px;font-weight:800;color:var(--ink)}
 .attestation-content img{width:100%;height:auto;margin-top:24px;border-radius:16px}
 @media(max-width:700px){.bonus-card{flex-direction:column;align-items:stretch;padding:26px 22px;gap:24px}.bonus-card h2{font-size:28px}.attestation-card summary{padding:22px;font-size:18px}.attestation-content{padding:0 22px 24px}.attestation-content p{font-size:18px}}
+
+/* Keep space between desktop menu labels and their hover borders. */
+@media(min-width:1181px){.header .nav a{padding:10px 14px}.header .nav{gap:12px}}
