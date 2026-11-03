@@ -166,3 +166,7 @@ h1,h2,h3{font-family:'Nunito',Arial,sans-serif;letter-spacing:-.025em;font-weigh
 
 /* Keep space between desktop menu labels and their hover borders. */
 @media(min-width:1181px){.header .nav a{padding:10px 14px}.header .nav{gap:12px}}
+
+/* A little more separation between the logo and desktop navigation. */
+@media(min-width:1181px){.header .logo{margin-right:80px}}
+@media(min-width:1440px){.header .logo{margin-right:96px}}
