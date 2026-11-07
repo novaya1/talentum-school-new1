@@ -177,17 +177,18 @@ h1,h2,h3{font-family:'Nunito',Arial,sans-serif;letter-spacing:-.025em;font-weigh
 @media(min-width:701px) and (max-width:1000px){.bonus-card{grid-template-columns:120px minmax(0,1fr)}.bonus-art{width:120px;grid-row:1 / 3}.bonus-card .btn{grid-column:2;justify-self:start}}
 @media(max-width:700px){.bonus-card{grid-template-columns:1fr;gap:18px}.bonus-art{width:130px;justify-self:center}.bonus-card .btn{justify-self:stretch}}
 
-/* Subject carousel: buttons and native touch scrolling, without autoplay. */
-.subject-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 24px}
-.subject-tabs button,.subject-controls button{font:inherit;font-weight:800;cursor:pointer;border:1px solid #D8C8EC;border-radius:14px;background:var(--soft);color:var(--ink);padding:12px 18px;transition:background-color .2s}
-.subject-tabs button[aria-pressed="true"]{background:var(--purple);color:#fff;border-color:var(--purple)}
-.subject-tabs button:hover,.subject-controls button:hover{background:#E4D7F3;color:var(--ink)}
-.subject-carousel{min-width:0;align-self:start}
-.subject-slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#C8B8E3 transparent;border-radius:20px;overscroll-behavior-x:contain}
-.subject-slide{flex:0 0 100%;min-width:0;margin:0;scroll-snap-align:start;scroll-snap-stop:always}
+/* Stacked subject cards with quiet controls on the image. */
+.subject-carousel{min-width:0;align-self:start;position:relative;isolation:isolate;padding:16px 16px 0 0}
+.subject-carousel::before,.subject-carousel::after{content:'';position:absolute;border-radius:20px;inset:0 0 24px 24px;background:var(--paper) center/cover no-repeat;border:1px solid #D8C8EC;pointer-events:none}
+.subject-carousel::before{background-image:var(--stack-back);opacity:.45}
+.subject-carousel::after{inset:8px 8px 12px 12px;background-image:var(--stack-next);opacity:.7}
+.subject-slides{position:relative;z-index:1;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:20px;overscroll-behavior-x:contain;box-shadow:0 8px 24px #2A1C3812}
+.subject-slides::-webkit-scrollbar{display:none}
+.subject-slide{flex:0 0 100%;min-width:0;margin:0;scroll-snap-align:start;scroll-snap-stop:always;background:var(--paper)}
 .subject-slide img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;border-radius:20px}
-.subject-controls{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:16px}
-.subject-controls button{padding:8px 16px;font-size:22px;line-height:1}
-.subject-controls span{font-weight:800;min-width:45px;text-align:center}
-@media(max-width:550px){.subject-tabs{gap:8px}.subject-tabs button{font-size:13px;padding:9px 12px}}
-@media(prefers-reduced-motion:reduce){.subject-tabs button,.subject-controls button{transition:none}}
+.subject-controls{position:absolute;z-index:2;left:10px;right:26px;top:calc(50% + 8px);transform:translateY(-50%);display:flex;align-items:center;justify-content:space-between;pointer-events:none}
+.subject-controls button{pointer-events:auto;display:flex;align-items:center;justify-content:center;width:42px;height:48px;border:1px solid #2A1C381A;border-radius:14px;background:#FCF8EFC9;color:#2A1C38;font:inherit;font-size:26px;cursor:pointer;opacity:0;transition:opacity .2s,background-color .2s;box-shadow:0 2px 8px #2A1C3810}
+.subject-carousel:hover .subject-controls button,.subject-carousel:focus-within .subject-controls button{opacity:.65}
+.subject-controls button:hover,.subject-controls button:focus-visible{opacity:1;background:var(--paper)}
+@media(hover:none),(pointer:coarse){.subject-controls button{opacity:.65}}
+@media(prefers-reduced-motion:reduce){.subject-controls button{transition:none}}
