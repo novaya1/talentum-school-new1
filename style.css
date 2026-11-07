@@ -291,3 +291,9 @@ body:has(.partner-dialog[open]){overflow:hidden}
  .home-page .hero-premium .lesson-cta{transition:none}
  .home-page .hero-premium .lesson-cta:hover{transform:none}
 }
+
+/* Progressive, one-time entrance for homepage content below the hero. */
+.home-page .scroll-reveal{opacity:0;translate:0 22px}
+.home-page .scroll-reveal.is-revealed{opacity:1;translate:0 0;transition:opacity .7s cubic-bezier(.2,.65,.3,1) var(--reveal-delay,0ms),translate .7s cubic-bezier(.2,.65,.3,1) var(--reveal-delay,0ms)}
+@media(prefers-reduced-motion:reduce){.home-page .scroll-reveal,.home-page .scroll-reveal.is-revealed{opacity:1;translate:none;transition:none}}
+@media print{.home-page .scroll-reveal,.home-page .scroll-reveal.is-revealed{opacity:1;translate:none;transition:none}}
