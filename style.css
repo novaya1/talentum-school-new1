@@ -297,3 +297,9 @@ body:has(.partner-dialog[open]){overflow:hidden}
 .home-page .scroll-reveal.is-revealed{opacity:1;translate:0 0;transition:opacity .7s cubic-bezier(.2,.65,.3,1) var(--reveal-delay,0ms),translate .7s cubic-bezier(.2,.65,.3,1) var(--reveal-delay,0ms)}
 @media(prefers-reduced-motion:reduce){.home-page .scroll-reveal,.home-page .scroll-reveal.is-revealed{opacity:1;translate:none;transition:none}}
 @media print{.home-page .scroll-reveal,.home-page .scroll-reveal.is-revealed{opacity:1;translate:none;transition:none}}
+
+/* Fast, consecutive entrance for the four benefit tiles only. */
+@media(prefers-reduced-motion:no-preference){
+ .home-page .feature.scroll-reveal{translate:0 14px}
+ .home-page .feature.scroll-reveal.is-revealed{translate:0 0;transition-duration:.32s}
+}

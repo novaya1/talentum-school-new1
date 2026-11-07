@@ -24,7 +24,8 @@
     if (bounds.top < window.innerHeight && bounds.bottom > 0) return;
     if (element.matches('.feature, .card, .info')) {
       const siblings = [...element.parentElement.children];
-      element.style.setProperty('--reveal-delay', `${Math.min(siblings.indexOf(element), 3) * 60}ms`);
+      const interval = element.matches('.feature') ? 100 : 60;
+      element.style.setProperty('--reveal-delay', `${Math.min(siblings.indexOf(element), 3) * interval}ms`);
     }
     element.classList.add('scroll-reveal');
     observer.observe(element);
