@@ -211,3 +211,23 @@ h1,h2,h3{font-family:'Nunito',Arial,sans-serif;letter-spacing:-.025em;font-weigh
 .library-preview{font-weight:800;color:var(--purple);padding:12px 0}
 .library-preview:hover{text-decoration:underline}
 @media(max-width:550px){.library-book .library-cover{height:260px}.library-book-actions{align-items:stretch;flex-direction:column}.library-book-actions a{text-align:center}}
+
+/* Discreet partner offer; details open only on request. */
+.partner-banner{position:fixed;right:20px;bottom:24px;z-index:30;width:116px}
+.partner-banner-open{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;width:116px;height:116px;padding:13px 10px;border:1px solid #7657EE55;border-radius:50%;background:#F0E8FAE8;color:var(--ink);font:inherit;cursor:pointer;box-shadow:0 4px 18px #2A1C381A;backdrop-filter:blur(8px);transition:background-color .2s,box-shadow .2s}
+.partner-banner-open span{font-size:11px;font-weight:800;line-height:1.25;text-align:center}
+.partner-banner-open strong{font-size:22px;line-height:1.2;color:#6040D0}
+.partner-banner-open:hover{background:#F0E8FA;box-shadow:0 6px 22px #7657EE30}
+.partner-banner-hide{position:absolute;right:-2px;top:-4px;display:grid;place-items:center;width:28px;height:28px;border:1px solid #D8C8EC;border-radius:50%;background:var(--paper);color:var(--ink);font:inherit;font-size:22px;line-height:1;cursor:pointer}
+.partner-dialog{width:calc(100% - 32px);max-width:650px;max-height:calc(100dvh - 40px);overflow-y:auto;overscroll-behavior:contain;padding:36px;border:1px solid var(--line);border-radius:24px;background:var(--paper);color:var(--ink);box-sizing:border-box}
+.partner-dialog::backdrop{background:#2A1C3866}
+.partner-dialog h2{font-size:30px;line-height:1.25;margin:16px 0}
+.partner-dialog .eyebrow{padding-right:28px}
+.partner-dialog .partner-offer{font-size:22px;font-weight:900;color:#6040D0;line-height:1.35}
+.partner-dialog-close{position:absolute;right:14px;top:14px;width:36px;height:36px;border:0;border-radius:50%;background:var(--soft);color:var(--ink);font:inherit;font-size:26px;line-height:1;cursor:pointer}
+.partner-terms{padding-left:22px;color:var(--muted);line-height:1.65}
+.partner-terms li{margin:12px 0}
+body:has(.partner-dialog[open]){overflow:hidden}
+@media(max-width:550px){.partner-banner{right:12px;bottom:calc(12px + env(safe-area-inset-bottom));width:92px}.partner-banner-open{width:92px;height:92px;padding:12px 8px;gap:2px}.partner-banner-open span{font-size:10px}.partner-banner-open strong{font-size:18px}.partner-dialog{padding:28px 22px}.partner-dialog h2{font-size:25px}.partner-dialog .btn{width:100%;font-size:14px}.partner-dialog .partner-offer{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.partner-banner-open{transition:none}}
+@media print{.partner-banner,.partner-dialog{display:none}}
