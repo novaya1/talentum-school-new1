@@ -28,6 +28,14 @@
     </ul>
     <p><strong>Хотите стать партнёром? Напишите нам — расскажем подробности и поможем начать.</strong></p>
     <a class="btn" href="https://t.me/Samirkin06" target="_blank" rel="noopener noreferrer">Стать партнёром — написать в Telegram ↗</a>`;
+  const hero = document.querySelector('.hero-premium');
+  if (hero) {
+    banner.hidden = true;
+    const observer = new IntersectionObserver(entries => {
+      banner.hidden = entries[0].isIntersecting;
+    }, {rootMargin: '-88px 0px 0px 0px'});
+    observer.observe(hero);
+  }
   document.body.append(banner, dialog);
   const open = banner.querySelector('.partner-banner-open');
   open.addEventListener('click', () => dialog.showModal());
