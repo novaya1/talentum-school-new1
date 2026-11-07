@@ -198,5 +198,5 @@ h1,h2,h3{font-family:'Nunito',Arial,sans-serif;letter-spacing:-.025em;font-weigh
 .hero-actions .lesson-cta:hover,.hero-actions .lesson-cta:focus-visible{background:#FFD16A;color:var(--ink);border-color:#FFD16A;box-shadow:0 8px 24px #FDBE3940}
 .hero-actions .lesson-cta:focus-visible{outline:3px solid #fff;outline-offset:4px}
 
-/* Brand purple accent for the main headline. */
-.hero h1,.hero h1 span{color:var(--purple)}
+/* White headline over the darkened video. */
+.hero h1,.hero h1 span{color:#fff}
