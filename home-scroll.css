@@ -1,0 +1,21 @@
+/* Home page scroll reveals — scoped to the homepage only. */
+.home-page .scroll-reveal-ready {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition: opacity 700ms cubic-bezier(.22,1,.36,1), transform 700ms cubic-bezier(.22,1,.36,1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.home-page .scroll-reveal-ready[data-reveal-kind="image"] {
+  transform: translate3d(0, 14px, 0) scale(.975);
+}
+.home-page .scroll-reveal-ready.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-page .scroll-reveal-ready {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
