@@ -309,3 +309,6 @@ body:has(.partner-dialog[open]){overflow:hidden}
 @media(min-width:1181px){.header .wrap{padding-left:48px;padding-right:24px}.header .logo{margin-right:72px}}
 @media(min-width:1440px){.header .logo{margin-right:88px}}
 @media(max-width:1180px){.header .logo{position:relative;left:6px}}
+
+/* Compact desktop navigation, grouped toward the phone action. */
+@media(min-width:1181px){.header .nav{justify-content:flex-end;gap:6px}.header-booking{margin-left:28px}}
