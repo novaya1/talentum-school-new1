@@ -304,3 +304,8 @@ body:has(.partner-dialog[open]){overflow:hidden}
 .home-page .hero-premium::before{display:block;content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,rgba(45,21,78,.48),rgba(58,30,95,.25))}
 .home-page .hero-premium h1{text-shadow:0 2px 18px #21102E38}
 @media(max-width:767px){.home-page .hero-premium::before{background:rgba(45,21,78,.38)}}
+
+/* Shift the header composition slightly right while keeping the phone aligned. */
+@media(min-width:1181px){.header .wrap{padding-left:48px;padding-right:24px}.header .logo{margin-right:72px}}
+@media(min-width:1440px){.header .logo{margin-right:88px}}
+@media(max-width:1180px){.header .logo{position:relative;left:6px}}
