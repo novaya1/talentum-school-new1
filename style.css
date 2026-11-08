@@ -310,5 +310,8 @@ body:has(.partner-dialog[open]){overflow:hidden}
 @media(min-width:1440px){.header .logo{margin-right:88px}}
 @media(max-width:1180px){.header .logo{position:relative;left:6px}}
 
-/* Compact desktop navigation, grouped toward the phone action. */
-@media(min-width:1181px){.header .nav{justify-content:flex-end;gap:6px}.header-booking{margin-left:28px}}
+/* Balanced navigation spacing uses the available header width. */
+@media(min-width:1181px){.header .nav{justify-content:space-between;gap:12px}.header .logo{margin-right:80px}.header-booking{margin-left:28px}}
+@media(min-width:1440px){.header .logo{margin-right:96px}}
+
+@media(min-width:1181px) and (max-width:1279px){.header .logo{margin-right:40px}}
