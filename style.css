@@ -329,3 +329,13 @@ body:has(.partner-dialog[open]){overflow:hidden}
 .header .header-booking{background:#F4C95D;color:#452080;border-color:transparent;transition:background-color .25s ease,color .25s ease}
 .header .header-booking:hover,.header .header-booking:focus-visible{background:#F8D67E;color:#452080;border-color:transparent}
 @media(prefers-reduced-motion:reduce){.header .nav a,.header .header-booking{transition:none}}
+
+/* Larger partner badge, inset from the corner and clear of hosting widgets. */
+.partner-banner{right:clamp(40px,5vw,96px);bottom:88px;width:160px;animation:partner-badge-enter .45s ease-out both}
+.partner-banner-open{width:160px;height:160px;padding:20px 16px;gap:7px;background:#F0EAFEF5;border-color:#BBA3ED;box-shadow:0 8px 28px #45208026}
+.partner-banner-open span{font-size:14px;line-height:1.3}
+.partner-banner-open strong{font-size:32px;color:#6635C5}
+.partner-banner-hide{right:0;top:-2px;width:30px;height:30px}
+@keyframes partner-badge-enter{from{opacity:0;translate:18px 0}to{opacity:1;translate:0 0}}
+@media(max-width:550px){.partner-banner{right:max(24px,env(safe-area-inset-right));bottom:calc(76px + env(safe-area-inset-bottom));width:128px}.partner-banner-open{width:128px;height:128px;padding:16px 12px;gap:5px}.partner-banner-open span{font-size:12px}.partner-banner-open strong{font-size:26px}}
+@media(prefers-reduced-motion:reduce){.partner-banner{animation:none}}
