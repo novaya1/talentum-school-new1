@@ -315,3 +315,17 @@ body:has(.partner-dialog[open]){overflow:hidden}
 @media(min-width:1440px){.header .logo{margin-right:96px}}
 
 @media(min-width:1181px) and (max-width:1279px){.header .logo{margin-right:40px}}
+
+/* Header presentation only: lavender panel, clear active state and gold phone CTA. */
+.header,.home-page .header{background:#F0EAFE;box-shadow:0 3px 14px #45208012;border-bottom:1px solid #4520800A}
+.header .nav{background:#F0EAFE}
+.header .nav a{color:#452080;font-weight:600;padding:10px 14px;border-radius:10px;border-color:transparent;background:transparent;transition:background-color .25s ease,color .25s ease,border-color .25s ease}
+.header .nav a.active{background:#DDD0FA;color:#452080;border-color:transparent}
+.header .nav a.active::after{display:none}
+.header .nav a:hover,.header .nav a:focus-visible{background:#6635C5;color:#fff;border-color:transparent}
+.header .nav a:focus-visible{outline:2px solid #452080;outline-offset:3px}
+.header .nav a.mobile-menu-phone{color:#452080;font-weight:600;border-radius:10px}
+.header .nav a.mobile-menu-phone:hover,.header .nav a.mobile-menu-phone:focus-visible{color:#fff;background:#6635C5}
+.header .header-booking{background:#F4C95D;color:#452080;border-color:transparent;transition:background-color .25s ease,color .25s ease}
+.header .header-booking:hover,.header .header-booking:focus-visible{background:#F8D67E;color:#452080;border-color:transparent}
+@media(prefers-reduced-motion:reduce){.header .nav a,.header .header-booking{transition:none}}
